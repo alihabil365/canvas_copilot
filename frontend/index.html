@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="UTF-8" />
+  <title>Canvas Copilot 🤖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563eb'
+          }
+        }
+      }
+    };
+  </script>
+  <script src="script.js" defer></script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen flex flex-col items-center pt-10 px-4 transition-colors duration-300">
+
+  <!-- Header -->
+  <div class="w-full max-w-2xl flex justify-between items-center mb-4">
+    <h1 class="text-4xl font-bold">Canvas Copilot 🤖</h1>
+    <button id="toggleDark" class="text-sm text-primary border border-primary px-3 py-1 rounded hover:bg-primary hover:text-white transition">Toggle 🌙</button>
+  </div>
+
+  <!-- Chat Box with Input Inside -->
+  <div class="w-full max-w-2xl bg-white dark:bg-gray-800 p-5 rounded-lg shadow space-y-4 overflow-y-auto max-h-[70vh] mb-4 flex flex-col justify-between" id="chatWrapper">
+    <div id="chatBox" class="space-y-4 overflow-y-auto flex-grow">
+      <!-- Messages will appear here -->
+    </div>
+
+    <!-- Chat Input -->
+    <div class="w-full flex items-center gap-2 mt-4 border-t border-gray-200 dark:border-gray-600 pt-4">
+      <input id="customQuestion" type="text" placeholder="💬 Ask anything..." class="flex-1 p-2 rounded-lg bg-gray-100 dark:bg-gray-700 focus:outline-none" />
+      <button id="customAskBtn" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">Send</button>
+    </div>
+  </div>
+
+  <!-- Dropdown -->
+  <div class="w-full max-w-2xl flex gap-2 mb-4">
+    <select id="queryType" class="flex-1 p-2 rounded-xl border border-gray-300 dark:bg-gray-700 dark:border-gray-600">
+      <option value="" disabled selected>🔍 Select a question type</option>
+      <option value="assignments">📌 What assignments are due?</option>
+      <option value="grades">📊 What are my grades?</option>
+      <option value="courses">🎓 What classes am I in?</option>
+      <option value="study">🗓️ Suggest a study slot</option>
+    </select>
+    <button id="submitBtn" class="bg-primary text-white px-4 py-2 rounded-xl hover:bg-blue-700 transition">Ask</button>
+  </div>
+
+</body>
+</html>
