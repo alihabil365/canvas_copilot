@@ -116,6 +116,11 @@ def ask_canvas():
                        for cls in schedule for meet in cls['Meetings']]
             return jsonify({"summary": summary})
         
+        elif intent == "followup_study_slot":
+            return jsonify({
+                "message": ai_response.get("message", "When would you like to study?")
+            })
+
         else:
             return jsonify({ "error": f"Unknown intent: {intent}" }), 400
 
