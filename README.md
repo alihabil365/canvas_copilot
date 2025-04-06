@@ -121,4 +121,4 @@ Just open `index.html` in your browser!
 ## 🏁 Hackathon Track
 
 **Canvas API Track – USF IT x Microsoft Hackathon 2025**  
-Built in 24 hours with sleep-deprived passion and ✨ way too much coffee.
+
